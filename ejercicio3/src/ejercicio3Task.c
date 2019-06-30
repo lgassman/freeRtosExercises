@@ -8,7 +8,7 @@
 
 /*=====[Inclusion of own header]=============================================*/
 
-#include "../inc/ejercicio2Task.h"
+#include "ejercicio3Task.h"
  
 /*=====[Inclusions of private function dependencies]=========================*/
 
@@ -42,11 +42,12 @@ void safeTaskDelayUntil(portTickType * base,  portTickType period) {
 	}
 }
 
-
 void myTask( void* taskParmPtr )
 {
 
    gpioMap_t led = *((gpioMap_t *)taskParmPtr);
+
+   gpioWrite( led, ON);
 
    // Send the task to the locked state for 1 s (delay)
 //  vTaskDelay( 1000 / portTICK_RATE_MS );
