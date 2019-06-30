@@ -56,6 +56,16 @@ Se utilizó como base el template que ya viene con el firmware de la Edu-CIAA pa
 
 Se cambio el uso de parámetros de la tarea para que el LED pueda ser configurado. Se quitó algunas líneas innecesarias del inicio y se renombró los achivos.
 
+#Ejercicio 2.
+
+program.mk
+``` Makefile
+PROGRAM_PATH = _programs/rtosExamples
+PROGRAM_NAME = ejercicio2
+```
+
+Se detectó que no se lleva bien la función vTaskDelayUntil cuando el segundo parámetro es un 0. Por eso se armó una función auxiliar que actualiza la base de tiempo sin ningún delay cuando el valor es 0.
+
 
 
 
